@@ -1,0 +1,12 @@
+
+    <script>
+        var req = new XMLHttpRequest();
+        req.onload = reqListener;
+        req.open('get','https://jsonplaceholder.typicode.com/posts/1',true);
+        req.withCredentials = true;
+        req.send();
+    
+        function reqListener() {
+            location='/satzcors'+alert(this.responseText);
+        };
+    </script>
