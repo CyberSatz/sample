@@ -9,7 +9,7 @@
     <p id="responseText"></p> <!-- Add a paragraph tag with an id -->
     <script>
         var req = new XMLHttpRequest();
-        req.onload = reqListener;
+        // req.onload = reqListener;
         req.open('get','https://jsonplaceholder.typicode.com/posts/1',true);
         req.withCredentials = true;
         req.send();
