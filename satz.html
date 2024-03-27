@@ -1,12 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="responseText"></p> <!-- Add a paragraph tag with an id -->
+    <script>
+        var req = new XMLHttpRequest();
+        req.onload = reqListener;
+        req.open('get','https://jsonplaceholder.typicode.com/posts/1',true);
+        req.withCredentials = true;
+        req.send();
 
-<script>
-    var req = new XMLHttpRequest();
-    req.onload = reqListener;
-    req.open('get','https://jsonplaceholder.typicode.com/posts/1',true);
-    req.withCredentials = true;
-    req.send();
-
-    function reqListener() {
-        location='/satz.html'+alert(this.responseText);
-    };
-</script>
+        function reqListener() {
+            var responseText = this.responseText; // Store the response text in a variable
+            document.getElementById('responseText').textContent = responseText; // Set the text content of the paragraph tag
+            location='/satz.html'; // Navigate to the specified page
+        };
+    </script>
+</body>
+</html>
